@@ -1,0 +1,55 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    background: #ab5e00;
+}
+.tabs{
+    width: 1000px;
+}
+.content-img{
+    width: 100%;
+    display: block;
+}
+.tabs>input[type="radio"]{
+    display: none;
+}
+.tabs>div{
+    margin-top: 30px;
+    display: none;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+}
+#tab-btn-1:checked~#content-1,
+#tab-btn-2:checked~#content-2,
+#tab-btn-3:checked~#content-3{
+    display: block;
+}
+.tabs>label{
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background: #f7a036;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-right: 30px;
+    font-size: 2rem;
+    line-height: 1.5;
+    transition: color 0.15s ease-in-out, background 0.5s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    top: 1px;
+}
+
+.tabs>input[type="radio"]:checked+label{
+    background: #ffffff;
+}
+
+
